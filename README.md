@@ -66,15 +66,15 @@ Very performant and wise at memory usage by using simple structures like delegat
 |        HiglaboMappingList | 1,362.8 ms | 18.48 ms |  16.38 ms | 60000 | 16000 |     - |    375 MB |
 
 ###### * Legends *
-  Mean      : Arithmetic mean of all measurements
-  Error     : Half of 99.9% confidence interval
-  StdDev    : Standard deviation of all measurements
-  Median    : Value separating the higher half of all measurements (50th percentile)
-  Gen 0     : GC Generation 0 collects per 1000 operations
-  Gen 1     : GC Generation 1 collects per 1000 operations
-  Gen 2     : GC Generation 2 collects per 1000 operations
-  Allocated : Allocated memory per single operation (managed only, inclusive, 1KB = 1024B)
-  1 ms      : 1 Millisecond (0.001 sec)
+  Mean      : Arithmetic mean of all measurements\
+  Error     : Half of 99.9% confidence interval\
+  StdDev    : Standard deviation of all measurements\
+  Median    : Value separating the higher half of all measurements (50th percentile)\
+  Gen 0     : GC Generation 0 collects per 1000 operations\
+  Gen 1     : GC Generation 1 collects per 1000 operations\
+  Gen 2     : GC Generation 2 collects per 1000 operations\
+  Allocated : Allocated memory per single operation (managed only, inclusive, 1KB = 1024B)\
+  1 ms      : 1 Millisecond (0.001 sec)\
 
 #### Allows Multiple Profiles
 
