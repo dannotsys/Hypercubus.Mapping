@@ -1,7 +1,7 @@
 ![Icon](https://avatars.githubusercontent.com/u/29736865?s=128&v=4)
 
 ## Hypercubus Mapper
-A fast and minimalist object to object mapper.
+A fast and minimalist object to object mapper for .Net.
 
 ### Usage
 
