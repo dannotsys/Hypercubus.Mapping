@@ -74,7 +74,7 @@ Very performant and wise at memory usage by using simple structures like delegat
   Gen 1     : GC Generation 1 collects per 1000 operations\
   Gen 2     : GC Generation 2 collects per 1000 operations\
   Allocated : Allocated memory per single operation (managed only, inclusive, 1KB = 1024B)\
-  1 ms      : 1 Millisecond (0.001 sec)\
+  1 ms      : 1 Millisecond (0.001 sec)
 
 #### Allows Multiple Profiles
 
