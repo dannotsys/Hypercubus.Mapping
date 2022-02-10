@@ -47,6 +47,11 @@ List<PersonDto> personsDto = mapper.Map<IEnumerable<Person>, List<PersonDto>>(pe
 ```
 
 ### Why use this library?
+
+#### Allows Multiple Profiles
+
+To add multiple profiles just create another mapper instance and configure its mappings.
+
 #### Performance and Memory efficient
 Very performant and wise at memory usage by using simple structures like delegates and caching.
 
@@ -92,7 +97,3 @@ Very performant and wise at memory usage by using simple structures like delegat
   Gen 2     : GC Generation 2 collects per 1000 operations\
   Allocated : Allocated memory per single operation (managed only, inclusive, 1KB = 1024B)\
   1 ms      : 1 Millisecond (0.001 sec)
-
-#### Allows Multiple Profiles
-
-To have multiple profiles just create another mapper instance and configure its mappings.
