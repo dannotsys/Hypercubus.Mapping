@@ -48,7 +48,7 @@ List<PersonDto> personsDto = mapper.Map<IEnumerable<Person>, List<PersonDto>>(pe
 
 ### Why use this library?
 
-### Generally Similar or Faster than Hand Written Code
+#### Generally Similar or Faster than Hand Written Code
 
 Why hand write mappings every time since you can standardize and reuse mapping rules by adopting a mapper library? And with a big plus that makes your code run FASTER. 
 With simple POCO classes Hypercubus mapper add 9% time overhead only in average. When classes become more complex with other classes referenced it can save up to 46% mapping time. (See table below)
