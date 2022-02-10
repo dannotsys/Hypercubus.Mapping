@@ -55,7 +55,8 @@ List<PersonDto> personsDto = mapper.Map<IEnumerable<Person>, List<PersonDto>>(pe
 
 #### No Complex Configurations and Library Bachelor Classes
 
-Keep it Simple, Silly :wink:
+Keep it Simple, Silly :wink:\
+&nbsp;
 
 #### Similar or even Faster than Handwritten Code
 
