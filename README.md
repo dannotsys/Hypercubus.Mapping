@@ -48,6 +48,11 @@ List<PersonDto> personsDto = mapper.Map<IEnumerable<Person>, List<PersonDto>>(pe
 
 ### Why use this library?
 
+#### Pure .NET Standard Code with No Dependencies
+
+This library does not use Reflection.Emit package so it can be used in Mono and Xamarin projects with no problem.
+
+
 #### Allows Multiple Profiles
 
 To add multiple profiles just create another mapper instance and configure its mappings.
