@@ -6,7 +6,7 @@ A fast and minimalist object to object mapper for .Net.\
 
 ### Usage
 
-All the configured mappings are managed by the `Hypercubus.Mapping.Mapper` class. You can use it with your favorite dependency injection framework to inject the mapper instance in your controller classes for example.\
+All the configured mapping is managed by the `Hypercubus.Mapping.Mapper` class. You can use it with your favorite dependency injection framework to inject the mapper instance in your controller classes for example.\
 &nbsp;
 
 #### Configuration
@@ -50,23 +50,21 @@ List<PersonDto> personsDto = mapper.Map<IEnumerable<Person>, List<PersonDto>>(pe
 &nbsp;
 
 ### Why use this library?
-&nbsp;
 
 #### Similarly Fast or Faster than Hand Written Code
 
 Why write mappings code by hand every time when you can make this process standard and reuse mapping rules by adopting a mapper library? And with a big plus that makes your code run FASTER. 
-With very simple POCO classes Hypercubus Mapper may add 9% time overhead only in average but when classes became more complex - with other classes referenced - it can save up to 46% mapping processing time.\
-&nbsp;
+With very simple POCO classes Hypercubus Mapper may add 9% time overhead only in average but when classes became more complex - with other classes referenced - it can save up to 46% mapping processing time.
 
 #### Pure .NET Standard 1.6 Code with No Dependencies
 
-This library does not use Reflection.Emit package so it can be used in Xamarin, Mono and UWP projects with no problem.\
-&nbsp;
+This library does not use Reflection.Emit package so it can be used in Xamarin, Mono and UWP projects with no problem.
+
 
 #### Allows Multiple Profiles
 
-To add multiple profiles just create another mapper instance and configure its mappings.\
-&nbsp;
+To add multiple profiles just create another mapper instance and configure its mappings.
+
 
 #### Performance and Memory efficient
 Great performance and smart memory usage by using simple structures like delegates and caching techniques.
