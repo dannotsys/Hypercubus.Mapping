@@ -48,7 +48,7 @@ List<PersonDto> personsDto = mapper.Map<IEnumerable<Person>, List<PersonDto>>(pe
 
 ### Why use this library?
 
-#### Pure .NET Standard Code with No Dependencies
+#### Pure .NET Standard 2.0 Code with No Dependencies
 
 This library does not use Reflection.Emit package so it can be used in Mono and Xamarin projects with no problem.
 
