@@ -5,7 +5,7 @@ A fast and minimalist object to object mapper for .Net.
 
 ### Usage
 
-All the mapping is managed by the `Hypercubus.Mapping.Mapper` struct. You can use it with your favorite dependency injection framework to inject the mapper instance in your controller classes for example.
+All the mapping is managed by the `Hypercubus.Mapping.Mapper` class. You can use it with your favorite dependency injection framework to inject the mapper instance in your controller classes for example.
 
 #### Configuration
 ```csharp
@@ -50,26 +50,43 @@ List<PersonDto> personsDto = mapper.Map<IEnumerable<Person>, List<PersonDto>>(pe
 #### Performance and Memory efficient
 Very performant and wise at memory usage by using simple structures like delegates and caching.
 
-1,000,000 records test:
+#### 1,000,000 records test:
 
-|                    Method |       Mean |    Error |    StdDev | Gen 0 | Gen 1 | Gen 2 | Allocated |
-|-------------------------- |-----------:|---------:|----------:|------:|------:|------:|----------:|
-|               HandWritten |   789.0 ms | 15.78 ms |  21.60 ms | 40000 | 13000 |     - |    253 MB |
-|    UsingImplicitOperators |   790.3 ms | 15.58 ms |  14.58 ms | 40000 | 13000 |     - |    253 MB |
-|   HypercubusInsideForEach |   653.0 ms | 11.61 ms |  15.90 ms | 34000 | 11000 |     - |    222 MB |
-|     HypercubusMappingList |   724.5 ms | 26.51 ms |  71.67 ms | 34000 | 11000 |     - |    222 MB |
-|    HypercubusMappingArray |   705.6 ms | 19.15 ms |  54.33 ms | 34000 | 11000 |     - |    214 MB |
-|   AutoMapperInsideForEach | 1,723.2 ms | 34.33 ms |  88.01 ms | 51000 | 18000 |  1000 |    314 MB |
-|     AutoMapperMappingList | 1,570.1 ms | 42.63 ms | 120.95 ms | 51000 | 18000 |  1000 |    314 MB |
-|    AutoMapperMappingArray | 1,568.8 ms | 54.24 ms | 152.99 ms | 51000 | 18000 |  1000 |    305 MB |
-|      HiglaboInsideForEach | 1,365.6 ms | 14.60 ms |  12.19 ms | 60000 | 16000 |     - |    375 MB |
-|        HiglaboMappingList | 1,362.8 ms | 18.48 ms |  16.38 ms | 60000 | 16000 |     - |    375 MB |
+|                     Method |       Mean |    Error |   StdDev |     Median | Ratio | RatioSD |      Gen 0 |      Gen 1 |     Gen 2 | Allocated |
+|--------------------------- |-----------:|---------:|---------:|-----------:|------:|--------:|-----------:|-----------:|----------:|----------:|
+|             'Hand Written' |   768.8 ms |  7.23 ms |  6.41 ms |   768.6 ms |  1.00 |    0.00 | 40000.0000 | 13000.0000 |         - |    244 MB |
+| 'Hypercubus InsideForEach' |   493.6 ms |  5.01 ms |  4.44 ms |   492.6 ms |  0.64 |    0.01 | 28000.0000 |  9000.0000 |         - |    184 MB |
+|     'Hypercubus MapToList' |   451.2 ms |  8.38 ms | 23.07 ms |   440.1 ms |  0.62 |    0.03 | 28000.0000 |  9000.0000 |         - |    184 MB |
+|    'Hypercubus MapToArray' |   417.6 ms |  5.68 ms |  4.75 ms |   417.1 ms |  0.54 |    0.01 | 28000.0000 |  9000.0000 |         - |    175 MB |
+| 'AutoMapper InsideForEach' | 1,648.2 ms | 20.49 ms | 19.17 ms | 1,643.8 ms |  2.14 |    0.03 | 51000.0000 | 18000.0000 | 1000.0000 |    314 MB |
+|     'AutoMapper MapToList' | 1,478.3 ms | 15.44 ms | 14.45 ms | 1,472.5 ms |  1.92 |    0.03 | 51000.0000 | 18000.0000 | 1000.0000 |    314 MB |
+|    'AutoMapper MapToArray' | 1,457.6 ms | 10.26 ms |  8.01 ms | 1,458.6 ms |  1.90 |    0.02 | 51000.0000 | 18000.0000 | 1000.0000 |    305 MB |
+|   'Mapster* InsideForEach' |   764.9 ms |  6.16 ms |  5.14 ms |   766.7 ms |  0.99 |    0.01 | 37000.0000 | 12000.0000 |         - |    237 MB |
+|       'Mapster* MapToList' |   648.4 ms |  8.02 ms |  7.11 ms |   646.2 ms |  0.84 |    0.01 | 37000.0000 | 12000.0000 |         - |    229 MB |
+|      'Mapster* MapToArray' |   645.7 ms |  7.33 ms |  6.12 ms |   646.1 ms |  0.84 |    0.01 | 37000.0000 | 12000.0000 |         - |    229 MB |
+
+###### * : Mapster can be faster if no custom adapter configuration is used. If your Dtos classes are usually identical to your business/entity classes then Mapster would be a better option
+
+|                     Method |       Mean |    Error |    StdDev |     Median | Ratio | RatioSD |      Gen 0 |      Gen 1 |     Gen 2 | Allocated |
+|--------------------------- |-----------:|---------:|----------:|-----------:|------:|--------:|-----------:|-----------:|----------:|----------:|
+|             'Hand Written' |   782.8 ms | 15.15 ms |  20.22 ms |   780.8 ms |  1.00 |    0.00 | 40000.0000 | 13000.0000 |         - |    244 MB |
+| 'Hypercubus InsideForEach' |   496.4 ms |  8.64 ms |   7.66 ms |   492.4 ms |  0.64 |    0.02 | 28000.0000 |  9000.0000 |         - |    184 MB |
+|     'Hypercubus MapToList' |   441.5 ms |  7.60 ms |   6.74 ms |   440.3 ms |  0.57 |    0.02 | 28000.0000 |  9000.0000 |         - |    184 MB |
+|    'Hypercubus MapToArray' |   420.2 ms |  6.93 ms |  12.85 ms |   416.0 ms |  0.54 |    0.03 | 28000.0000 |  9000.0000 |         - |    175 MB |
+| 'AutoMapper InsideForEach' | 1,661.0 ms | 27.94 ms |  24.76 ms | 1,652.3 ms |  2.13 |    0.07 | 51000.0000 | 18000.0000 | 1000.0000 |    314 MB |
+|     'AutoMapper MapToList' | 2,029.9 ms | 43.12 ms | 122.32 ms | 2,028.9 ms |  2.68 |    0.19 | 51000.0000 | 18000.0000 | 1000.0000 |    314 MB |
+|    'AutoMapper MapToArray' | 1,570.0 ms | 41.04 ms | 119.06 ms | 1,532.2 ms |  2.04 |    0.17 | 51000.0000 | 18000.0000 | 1000.0000 |    305 MB |
+|    'Mapster InsideForEach' |   461.5 ms |  9.22 ms |  26.15 ms |   455.6 ms |  0.59 |    0.03 | 29000.0000 | 10000.0000 |         - |    191 MB |
+|        'Mapster MapToList' |   357.8 ms |  6.77 ms |  10.93 ms |   354.0 ms |  0.46 |    0.02 | 29000.0000 | 10000.0000 |         - |    183 MB |
+|       'Mapster MapToArray' |   346.0 ms |  6.79 ms |  12.76 ms |   349.6 ms |  0.44 |    0.02 | 29000.0000 | 10000.0000 |         - |    183 MB |
 
 ###### * Legends *
-  Mean      : Arithmetic mean of all measurements\
+ Mean      : Arithmetic mean of all measurements\
   Error     : Half of 99.9% confidence interval\
   StdDev    : Standard deviation of all measurements\
   Median    : Value separating the higher half of all measurements (50th percentile)\
+  Ratio     : Mean of the ratio distribution ([Current]/[Baseline])\
+  RatioSD   : Standard deviation of the ratio distribution ([Current]/[Baseline])\
   Gen 0     : GC Generation 0 collects per 1000 operations\
   Gen 1     : GC Generation 1 collects per 1000 operations\
   Gen 2     : GC Generation 2 collects per 1000 operations\
