@@ -104,8 +104,8 @@ Great performance and smart memory usage by using simple structures like delegat
 ###### * Test Configuration *
 
 AutoMapper 11.0.1\
-Mapster 7.2.0\
 Hypercubus.Mapping 0.1.14\
+Mapster 7.2.0
 
 BenchmarkDotNet=v0.13.1, OS=Windows 10.0.19043.1466 (21H1/May2021Update)\
 Intel Core i5-8250U CPU 1.60GHz (Kaby Lake R), 1 CPU, 8 logical and 4 physical cores\
