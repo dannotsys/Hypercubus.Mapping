@@ -79,9 +79,6 @@ Very performant and wise at memory usage by using simple structures like delegat
 | 'Hypercubus InsideForEach' |   496.4 ms |  8.64 ms |   7.66 ms |   492.4 ms |  0.64 |    0.02 | 28000.0000 |  9000.0000 |         - |    184 MB |
 |     'Hypercubus MapToList' |   441.5 ms |  7.60 ms |   6.74 ms |   440.3 ms |  0.57 |    0.02 | 28000.0000 |  9000.0000 |         - |    184 MB |
 |    'Hypercubus MapToArray' |   420.2 ms |  6.93 ms |  12.85 ms |   416.0 ms |  0.54 |    0.03 | 28000.0000 |  9000.0000 |         - |    175 MB |
-| 'AutoMapper InsideForEach' | 1,661.0 ms | 27.94 ms |  24.76 ms | 1,652.3 ms |  2.13 |    0.07 | 51000.0000 | 18000.0000 | 1000.0000 |    314 MB |
-|     'AutoMapper MapToList' | 2,029.9 ms | 43.12 ms | 122.32 ms | 2,028.9 ms |  2.68 |    0.19 | 51000.0000 | 18000.0000 | 1000.0000 |    314 MB |
-|    'AutoMapper MapToArray' | 1,570.0 ms | 41.04 ms | 119.06 ms | 1,532.2 ms |  2.04 |    0.17 | 51000.0000 | 18000.0000 | 1000.0000 |    305 MB |
 |    'Mapster InsideForEach' |   461.5 ms |  9.22 ms |  26.15 ms |   455.6 ms |  0.59 |    0.03 | 29000.0000 | 10000.0000 |         - |    191 MB |
 |        'Mapster MapToList' |   357.8 ms |  6.77 ms |  10.93 ms |   354.0 ms |  0.46 |    0.02 | 29000.0000 | 10000.0000 |         - |    183 MB |
 |       'Mapster MapToArray' |   346.0 ms |  6.79 ms |  12.76 ms |   349.6 ms |  0.44 |    0.02 | 29000.0000 | 10000.0000 |         - |    183 MB |
