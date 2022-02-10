@@ -50,7 +50,7 @@ List<PersonDto> personsDto = mapper.Map<IEnumerable<Person>, List<PersonDto>>(pe
 
 #### Pure .NET Standard 2.0 Code with No Dependencies
 
-This library does not use Reflection.Emit package so it can be used in Mono and Xamarin projects with no problem.
+This library does not use Reflection.Emit package so it can be used in Xamarin projects with no problem.
 
 
 #### Allows Multiple Profiles
