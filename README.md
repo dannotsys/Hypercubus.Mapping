@@ -2,8 +2,8 @@
 
 ## Hypercubus Mapper
 A fast and minimalist object to object mapper for .Net.
-<br />
-<br />
+&nbsp;
+&nbsp;
 
 ### Usage
 
@@ -47,7 +47,8 @@ After injecting it in your controllers just make a simple call like this:
 ```csharp
 List<PersonDto> personsDto = mapper.Map<IEnumerable<Person>, List<PersonDto>>(persons);
 ```
-<br />
+&nbsp;
+&nbsp;
 
 ### Why use this library?
 
