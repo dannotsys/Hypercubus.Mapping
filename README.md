@@ -58,7 +58,7 @@ List<PersonDto> personsDto = mapper.Map<IEnumerable<Person>, List<PersonDto>>(pe
 Keep it Simple, Silly :wink:\
 &nbsp;
 
-#### Similar or even Faster than Handwritten Code
+#### Similar or even Faster than Traditional Handwritten Code
 
 Why write mappings code by hand every time when you can make this process standard and reuse mapping rules by adopting a mapper library? And with a big plus that makes your code run FASTER.
 
