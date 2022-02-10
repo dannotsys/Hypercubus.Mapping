@@ -39,7 +39,7 @@ services.AddSingleton(sc =>
 ```
 By default IEnumerables, Arrays and Lists are automatically configured for your configured types. You can disable this for a individual Type by using the overload of the `Configure` method that has a `addDefaultEnumerableTypes` parameter.
 
-#### Usage
+#### Mapper Usage
 After injecting it in your controllers just make a simple call like this:
 
 ```csharp
