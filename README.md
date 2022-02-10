@@ -11,7 +11,7 @@ All the mapping is managed by the `Hypercubus.Mapping.Mapper` struct. You can us
 ```csharp
 services.AddSingleton(sc =>
 {
-    IMapper mapper = new HypercubusMapper.Mapper();
+    IMapper mapper = new Hypercubus.Mapping.Mapper();
 
     mapper.Configure<Phone, PhoneDto>((m, s) => new PhoneDto()
     {
