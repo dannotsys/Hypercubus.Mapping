@@ -59,7 +59,7 @@ To add multiple profiles just create another mapper instance and configure its m
 
 
 #### Performance and Memory efficient
-Very performant and wise at memory usage by using simple structures like delegates and caching.
+Great performance and smart memory usage by using simple structures like delegates and caching techniques.
 
 #### 1,000,000 records test:
 
