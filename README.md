@@ -109,4 +109,4 @@ Mapster 7.2.0
 
 BenchmarkDotNet=v0.13.1, OS=Windows 10.0.19043.1466 (21H1/May2021Update)\
 Intel Core i5-8250U CPU 1.60GHz (Kaby Lake R), 1 CPU, 8 logical and 4 physical cores\
-.NET SDK=6.0.100
+.NET SDK=6.0.100 
