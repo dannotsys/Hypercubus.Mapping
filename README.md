@@ -48,7 +48,6 @@ After injecting it in your controllers just make a simple call like this:
 List<PersonDto> personsDto = mapper.Map<IEnumerable<Person>, List<PersonDto>>(persons);
 ```
 <br />
-<br />
 
 ### Why use this library?
 
