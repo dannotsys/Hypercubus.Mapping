@@ -45,7 +45,7 @@ After injecting it in your controllers just make a simple call like this:
 ```csharp
 List<PersonDto> personsDto = mapper.Map<IEnumerable<Person>, List<PersonDto>>(persons);
 ```
-###\
+###
 
 ### Why use this library?
 
