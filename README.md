@@ -67,7 +67,7 @@ This library does not use Reflection.Emit package so it can be used in Xamarin, 
 
 #### Allows Multiple Profiles
 
-To add multiple profiles just create another mapper instance and configure its mappings.\
+To add multiple profiles just create another Mapper instance and configure its mappings.\
 &nbsp;
 
 #### Performance and Memory efficiency
