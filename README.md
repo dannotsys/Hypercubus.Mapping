@@ -2,6 +2,7 @@
 
 ## Hypercubus Mapper
 A fast and minimalist object to object mapper for .Net.
+&nbsp;
 
 ### Usage
 
