@@ -72,7 +72,7 @@ To add multiple profiles just create another mapper instance and configure its m
 #### Performance and Memory efficient
 Great performance and smart memory usage by using simple structures like delegates and caching techniques.
 
-#### 1,000,000 records test:
+#### 1,000,000 Person objects test with Phones list and User info:
 
 |                     Method |       Mean |    Error |   StdDev | Ratio |      Gen 0 |      Gen 1 |     Gen 2 | Allocated |
 |--------------------------- |-----------:|---------:|---------:|------:|-----------:|-----------:|----------:|----------:|
