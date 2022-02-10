@@ -6,7 +6,7 @@ A fast and minimalist object to object mapper for .Net.\
 
 ### Usage
 
-All the configured mapping is managed by the `Hypercubus.Mapping.Mapper` class. You can use it with your favorite dependency injection framework to inject the mapper instance in your controller classes for example.\
+All the configured mapping is managed by the `Hypercubus.Mapping.Mapper` class. You can use it with your favorite dependency injection framework to inject the mapper instance in your Asp.Net controller classes.\
 &nbsp;
 
 #### Configuration
@@ -39,7 +39,7 @@ services.AddSingleton(sc =>
     return mapper;
 });
 ```
-By default IEnumerables, Arrays and Lists are automatically configured for your configured types. You can disable this for a individual Type by using the overload of the `Configure` method that has a `addDefaultEnumerableTypes` parameter.\
+IEnumerable, Array, and List configurations are automatically added to your configured types by default. You can disable this for a individual Type by using the overload of the `Configure` method that has a `addDefaultEnumerableTypes` parameter.\
 &nbsp;
 
 #### Mapper Usage
@@ -53,15 +53,15 @@ List<PersonDto> personsDto = mapper.Map<IEnumerable<Person>, List<PersonDto>>(pe
 ### Why use this library?
 &nbsp;
 
-#### Similarly Fast or Faster than Hand Written Code
+#### Similar or even Faster than Handwritten Code
 
 Why write mappings code by hand every time when you can make this process standard and reuse mapping rules by adopting a mapper library? And with a big plus that makes your code run FASTER. 
-With very simple POCO classes Hypercubus Mapper normally runs in a time equivalent to handwriting and rarely adding a maximum of 9% time overhead but when classes became more complex - with other classes referenced - it can save up to 46% mapping processing time.\
+With very simple POCO classes, Hypercubus Mapper runs typically in a time equivalent to handwriting and rarely adds a maximum of 9% time overhead. Still, when classes become more complex - with other classes referenced - it can save up to 46% mapping processing time.\
 &nbsp;
 
 #### Pure .NET Standard 1.6 Code with No Dependencies
 
-This library does not use Reflection.Emit package so it can be used in Xamarin, Mono and UWP projects with no problem.\
+This library does not use Reflection.Emit package so it can be used in Xamarin, Mono, and UWP projects without a problem.\
 &nbsp;
 
 #### Allows Multiple Profiles
@@ -69,7 +69,7 @@ This library does not use Reflection.Emit package so it can be used in Xamarin, 
 To add multiple profiles just create another mapper instance and configure its mappings.\
 &nbsp;
 
-#### Performance and Memory efficient
+#### Performance and Memory efficiency
 Great performance and smart memory usage by using simple structures like delegates and caching techniques.
 
 #### 1,000,000 Person objects test with Phones list and User info:
