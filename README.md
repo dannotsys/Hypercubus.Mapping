@@ -53,6 +53,10 @@ List<PersonDto> personsDto = mapper.Map<IEnumerable<Person>, List<PersonDto>>(pe
 ### Why use this library?
 &nbsp;
 
+#### No Complex Configurations and Library Bachelor Classes
+
+Keep it Simple, Silly :wink:
+
 #### Similar or even Faster than Handwritten Code
 
 Why write mappings code by hand every time when you can make this process standard and reuse mapping rules by adopting a mapper library? And with a big plus that makes your code run FASTER.
