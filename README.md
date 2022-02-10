@@ -53,7 +53,7 @@ List<PersonDto> personsDto = mapper.Map<IEnumerable<Person>, List<PersonDto>>(pe
 ### Why use this library?
 &nbsp;
 
-#### No Complex Configurations and Library Bachelor Classes
+#### No Complex Configurations and Library Bachelor Classes Needed
 
 Keep it Simple, Silly :wink:\
 &nbsp;
