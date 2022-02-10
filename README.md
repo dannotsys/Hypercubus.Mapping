@@ -48,22 +48,24 @@ List<PersonDto> personsDto = mapper.Map<IEnumerable<Person>, List<PersonDto>>(pe
 ```
 &nbsp;
 
-### Why use this library?
+### Why use this library?\
+&nbsp;
 
 #### Similarly Fast or Faster than Hand Written Code
 
 Why write mappings code by hand every time when you can make this process standard and reuse mapping rules by adopting a mapper library? And with a big plus that makes your code run FASTER. 
-With very simple POCO classes Hypercubus Mapper may add 9% time overhead only in average but when classes became more complex - with other classes referenced - it can save up to 46% mapping processing time.
+With very simple POCO classes Hypercubus Mapper may add 9% time overhead only in average but when classes became more complex - with other classes referenced - it can save up to 46% mapping processing time.\
+&nbsp;
 
 #### Pure .NET Standard 1.6 Code with No Dependencies
 
-This library does not use Reflection.Emit package so it can be used in Xamarin, Mono and UWP projects with no problem.
-
+This library does not use Reflection.Emit package so it can be used in Xamarin, Mono and UWP projects with no problem.\
+&nbsp;
 
 #### Allows Multiple Profiles
 
-To add multiple profiles just create another mapper instance and configure its mappings.
-
+To add multiple profiles just create another mapper instance and configure its mappings.\
+&nbsp;
 
 #### Performance and Memory efficient
 Great performance and smart memory usage by using simple structures like delegates and caching techniques.
