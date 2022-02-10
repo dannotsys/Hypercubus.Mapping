@@ -76,7 +76,7 @@ Great performance and smart memory usage by using simple structures like delegat
 |       'Mapster* MapToList' |   648.4 ms |  8.02 ms |  7.11 ms |  0.84 | 37000      | 12000      |         - |    229 MB |
 |      'Mapster* MapToArray' |   645.7 ms |  7.33 ms |  6.12 ms |  0.84 | 37000      | 12000      |         - |    229 MB |
 
-###### * : Mapster can be faster if no custom adapter configuration is used for a mapping. But if your Dtos classes are usually different from your business/entity classes maybe Hypercubus.Mapping would be a better option for you.
+###### * : Mapster can be faster if NO custom adapter configuration is used for a mapping. But if your Dtos classes are usually different from your business/entity classes maybe Hypercubus.Mapping would be a better option for you.
 
 |                     Method |       Mean |    Error |    StdDev | Ratio |      Gen 0 |      Gen 1 |     Gen 2 | Allocated |
 |--------------------------- |-----------:|---------:|----------:|------:|-----------:|-----------:|----------:|----------:|
