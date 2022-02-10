@@ -6,7 +6,8 @@ A fast and minimalist object to object mapper for .Net.\
 
 ### Usage
 
-All the mapping is managed by the `Hypercubus.Mapping.Mapper` class. You can use it with your favorite dependency injection framework to inject the mapper instance in your controller classes for example.
+All the configured mappings are managed by the `Hypercubus.Mapping.Mapper` class. You can use it with your favorite dependency injection framework to inject the mapper instance in your controller classes for example.\
+&nbsp;
 
 #### Configuration
 ```csharp
