@@ -63,30 +63,30 @@ Very performant and wise at memory usage by using simple structures like delegat
 
 #### 1,000,000 records test:
 
-|                     Method |       Mean |    Error |   StdDev |     Median | Ratio | RatioSD |      Gen 0 |      Gen 1 |     Gen 2 | Allocated |
-|--------------------------- |-----------:|---------:|---------:|-----------:|------:|--------:|-----------:|-----------:|----------:|----------:|
-|             'Hand Written' |   768.8 ms |  7.23 ms |  6.41 ms |   768.6 ms |  1.00 |    0.00 | 40000      | 13000      |         - |    244 MB |
-| 'Hypercubus InsideForEach' |   493.6 ms |  5.01 ms |  4.44 ms |   492.6 ms |  0.64 |    0.01 | 28000      |  9000      |         - |    184 MB |
-|     'Hypercubus MapToList' |   451.2 ms |  8.38 ms | 23.07 ms |   440.1 ms |  0.62 |    0.03 | 28000      |  9000      |         - |    184 MB |
-|    'Hypercubus MapToArray' |   417.6 ms |  5.68 ms |  4.75 ms |   417.1 ms |  0.54 |    0.01 | 28000      |  9000      |         - |    175 MB |
-| 'AutoMapper InsideForEach' | 1,648.2 ms | 20.49 ms | 19.17 ms | 1,643.8 ms |  2.14 |    0.03 | 51000      | 18000      | 1000      |    314 MB |
-|     'AutoMapper MapToList' | 1,478.3 ms | 15.44 ms | 14.45 ms | 1,472.5 ms |  1.92 |    0.03 | 51000      | 18000      | 1000      |    314 MB |
-|    'AutoMapper MapToArray' | 1,457.6 ms | 10.26 ms |  8.01 ms | 1,458.6 ms |  1.90 |    0.02 | 51000      | 18000      | 1000      |    305 MB |
-|   'Mapster* InsideForEach' |   764.9 ms |  6.16 ms |  5.14 ms |   766.7 ms |  0.99 |    0.01 | 37000      | 12000      |         - |    237 MB |
-|       'Mapster* MapToList' |   648.4 ms |  8.02 ms |  7.11 ms |   646.2 ms |  0.84 |    0.01 | 37000      | 12000      |         - |    229 MB |
-|      'Mapster* MapToArray' |   645.7 ms |  7.33 ms |  6.12 ms |   646.1 ms |  0.84 |    0.01 | 37000      | 12000      |         - |    229 MB |
+|                     Method |       Mean |    Error |   StdDev | Ratio |      Gen 0 |      Gen 1 |     Gen 2 | Allocated |
+|--------------------------- |-----------:|---------:|---------:|------:|-----------:|-----------:|----------:|----------:|
+|             'Hand Written' |   768.8 ms |  7.23 ms |  6.41 ms |  1.00 | 40000      | 13000      |         - |    244 MB |
+| 'Hypercubus InsideForEach' |   493.6 ms |  5.01 ms |  4.44 ms |  0.64 | 28000      |  9000      |         - |    184 MB |
+|     'Hypercubus MapToList' |   451.2 ms |  8.38 ms | 23.07 ms |  0.62 | 28000      |  9000      |         - |    184 MB |
+|    'Hypercubus MapToArray' |   417.6 ms |  5.68 ms |  4.75 ms |  0.54 | 28000      |  9000      |         - |    175 MB |
+| 'AutoMapper InsideForEach' | 1,648.2 ms | 20.49 ms | 19.17 ms |  2.14 | 51000      | 18000      | 1000      |    314 MB |
+|     'AutoMapper MapToList' | 1,478.3 ms | 15.44 ms | 14.45 ms |  1.92 | 51000      | 18000      | 1000      |    314 MB |
+|    'AutoMapper MapToArray' | 1,457.6 ms | 10.26 ms |  8.01 ms |  1.90 | 51000      | 18000      | 1000      |    305 MB |
+|   'Mapster* InsideForEach' |   764.9 ms |  6.16 ms |  5.14 ms |  0.99 | 37000      | 12000      |         - |    237 MB |
+|       'Mapster* MapToList' |   648.4 ms |  8.02 ms |  7.11 ms |  0.84 | 37000      | 12000      |         - |    229 MB |
+|      'Mapster* MapToArray' |   645.7 ms |  7.33 ms |  6.12 ms |  0.84 | 37000      | 12000      |         - |    229 MB |
 
 ###### * : Mapster can be faster if no custom adapter configuration is used. If your Dtos classes are usually identical to your business/entity classes then Mapster would be a better option
 
-|                     Method |       Mean |    Error |    StdDev |     Median | Ratio | RatioSD |      Gen 0 |      Gen 1 |     Gen 2 | Allocated |
-|--------------------------- |-----------:|---------:|----------:|-----------:|------:|--------:|-----------:|-----------:|----------:|----------:|
-|             'Hand Written' |   782.8 ms | 15.15 ms |  20.22 ms |   780.8 ms |  1.00 |    0.00 | 40000      | 13000      |         - |    244 MB |
-| 'Hypercubus InsideForEach' |   496.4 ms |  8.64 ms |   7.66 ms |   492.4 ms |  0.64 |    0.02 | 28000      |  9000      |         - |    184 MB |
-|     'Hypercubus MapToList' |   441.5 ms |  7.60 ms |   6.74 ms |   440.3 ms |  0.57 |    0.02 | 28000      |  9000      |         - |    184 MB |
-|    'Hypercubus MapToArray' |   420.2 ms |  6.93 ms |  12.85 ms |   416.0 ms |  0.54 |    0.03 | 28000      |  9000      |         - |    175 MB |
-|    'Mapster InsideForEach' |   461.5 ms |  9.22 ms |  26.15 ms |   455.6 ms |  0.59 |    0.03 | 29000      | 10000      |         - |    191 MB |
-|        'Mapster MapToList' |   357.8 ms |  6.77 ms |  10.93 ms |   354.0 ms |  0.46 |    0.02 | 29000      | 10000      |         - |    183 MB |
-|       'Mapster MapToArray' |   346.0 ms |  6.79 ms |  12.76 ms |   349.6 ms |  0.44 |    0.02 | 29000      | 10000      |         - |    183 MB |
+|                     Method |       Mean |    Error |    StdDev | Ratio |      Gen 0 |      Gen 1 |     Gen 2 | Allocated |
+|--------------------------- |-----------:|---------:|----------:|------:|-----------:|-----------:|----------:|----------:|
+|             'Hand Written' |   782.8 ms | 15.15 ms |  20.22 ms |  1.00 | 40000      | 13000      |         - |    244 MB |
+| 'Hypercubus InsideForEach' |   496.4 ms |  8.64 ms |   7.66 ms |  0.64 | 28000      |  9000      |         - |    184 MB |
+|     'Hypercubus MapToList' |   441.5 ms |  7.60 ms |   6.74 ms |  0.57 | 28000      |  9000      |         - |    184 MB |
+|    'Hypercubus MapToArray' |   420.2 ms |  6.93 ms |  12.85 ms |  0.54 | 28000      |  9000      |         - |    175 MB |
+|    'Mapster InsideForEach' |   461.5 ms |  9.22 ms |  26.15 ms |  0.59 | 29000      | 10000      |         - |    191 MB |
+|        'Mapster MapToList' |   357.8 ms |  6.77 ms |  10.93 ms |  0.46 | 29000      | 10000      |         - |    183 MB |
+|       'Mapster MapToArray' |   346.0 ms |  6.79 ms |  12.76 ms |  0.44 | 29000      | 10000      |         - |    183 MB |
 
 ###### * Legends *
  Mean      : Arithmetic mean of all measurements\
