@@ -49,7 +49,6 @@ List<PersonDto> personsDto = mapper.Map<IEnumerable<Person>, List<PersonDto>>(pe
 &nbsp;
 
 ### Why use this library?
-&nbsp;\
 &nbsp;
 
 #### Similarly Fast or Faster than Hand Written Code
