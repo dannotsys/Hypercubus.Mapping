@@ -52,6 +52,7 @@ List<PersonDto> personsDto = mapper.Map<IEnumerable<Person>, List<PersonDto>>(pe
 
 To add multiple profiles just create another mapper instance and configure its mappings.
 
+
 #### Performance and Memory efficient
 Very performant and wise at memory usage by using simple structures like delegates and caching.
 
