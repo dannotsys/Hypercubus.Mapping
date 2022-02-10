@@ -56,7 +56,7 @@ List<PersonDto> personsDto = mapper.Map<IEnumerable<Person>, List<PersonDto>>(pe
 #### Similarly Fast or Faster than Hand Written Code
 
 Why write mappings code by hand every time when you can make this process standard and reuse mapping rules by adopting a mapper library? And with a big plus that makes your code run FASTER. 
-With very simple POCO classes Hypercubus Mapper may add 9% time overhead only in average but when classes became more complex - with other classes referenced - it can save up to 46% mapping processing time.\
+With very simple POCO classes Hypercubus Mapper normally runs in a time equivalent to handwriting and rarely adding a maximum of 9% time overhead but when classes became more complex - with other classes referenced - it can save up to 46% mapping processing time.\
 &nbsp;
 
 #### Pure .NET Standard 1.6 Code with No Dependencies
