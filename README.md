@@ -48,6 +48,15 @@ After injecting it in your controllers just make a simple call like this:
 ```csharp
 List<PersonDto> personsDto = mapper.Map<IEnumerable<Person>, List<PersonDto>>(persons);
 ```
+If you use a single set of mappings profiles, i.e. a single Mapper class, you can use a shorter and easier to write mapping extension method:
+
+```csharp
+List<PersonDto> personsDto = persons.Maps().To<List<PersonDto>>();
+```
+These will be based on the default Mapper which is the first Mapper created in the current process and can also be changed when needed:
+```csharp
+Mapper.ChangeDefault(alternateMapper);
+```
 &nbsp;
 
 ### Why use this library?
