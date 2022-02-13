@@ -54,7 +54,7 @@ If you use a single set of mappings rules, i.e. a single Mapper class, you can u
 ```csharp
 List<PersonDto> personsDto = persons.Maps().To<List<PersonDto>>();
 ```
-These will be based on the default Mapper which is the first Mapper created in the current process and can also be changed when needed:
+This will be based on the default Mapper which is the first Mapper created in the current process and can also be changed when needed:
 ```csharp
 Mapper.ChangeDefault(alternateMapper);
 ```
