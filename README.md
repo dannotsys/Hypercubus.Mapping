@@ -32,7 +32,7 @@ services.AddSingleton(sc =>
         Id = s.Id,
         Name = s.Name,
         Age = s.Age,
-        UserLog = m.Map<User, UserDto>(s.UserLog),
+        UserLog = m.From(s.UserLog).To<UserDto>(), // New Syntax!
         Phones = m.Map<List<Phone>, PhoneDto[]>(s.Phones)
     });
 
