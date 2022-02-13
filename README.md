@@ -32,7 +32,7 @@ services.AddSingleton(sc =>
         Id = s.Id,
         Name = s.Name,
         Age = s.Age,
-        UserLog = m.From(s.UserLog).To<UserDto>(), // New Syntax!
+        UserLog = m.Map(s.UserLog).To<UserDto>(), // New Syntax!
         Phones = m.Map<List<Phone>, PhoneDto[]>(s.Phones)
     });
 
@@ -47,12 +47,12 @@ IEnumerable, Array, and List configurations are automatically added to your conf
 After injecting it in your controllers just make a simple call like this:
 
 ```csharp
-List<PersonDto> personsDto = mapper.From(persons).To<List<PersonDto>>();
+List<PersonDto> personsDto = mapper.Map(persons).To<List<PersonDto>>();
 ```
 If you use a single set of mappings rules, i.e. a single Mapper class, you can use a shorter and easier to write mapping extension method:
 
 ```csharp
-List<PersonDto> personsDto = persons.Maps().To<List<PersonDto>>();
+List<PersonDto> personsDto = persons.Map().To<List<PersonDto>>();
 ```
 This will be based on the default Mapper which is the first Mapper created in the current process and can also be changed when needed:
 ```csharp
