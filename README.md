@@ -42,11 +42,12 @@ services.AddSingleton(sc =>
 IEnumerable, Array, and List configurations are automatically added to your configured types by default. You can disable this for a individual Type by using the overload of the `Configure` method that has a `addDefaultEnumerableTypes` parameter.\
 &nbsp;
 
+
 #### Mapper Usage
 After injecting it in your controllers just make a simple call like this:
 
 ```csharp
-List<PersonDto> personsDto = mapper.Map<IEnumerable<Person>, List<PersonDto>>(persons);
+List<PersonDto> personsDto = mapper.From(persons).To<List<PersonDto>>();
 ```
 If you use a single set of mappings profiles, i.e. a single Mapper class, you can use a shorter and easier to write mapping extension method:
 
