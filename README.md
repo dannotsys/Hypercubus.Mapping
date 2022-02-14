@@ -63,7 +63,7 @@ Mapper.ChangeDefault(alternateMapper);
 ### Why use this library?
 &nbsp;
 
-#### No Complex Configurations and Library Bachelor Classes Needed
+#### No Complex Configurations and WYSIWYG
 
 Keep it Simple, Silly :wink:\
 &nbsp;
