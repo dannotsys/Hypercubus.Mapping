@@ -70,7 +70,7 @@ Keep it Simple, Silly :wink:\
 
 #### Validate your Mappings Rules at Compile Time
 
-Fully automated mapping might seem useful, but it can become a problem when properties are changed or renamed and things stop working and the team doesn't immediately know why. Hypercubus.Mapping always enforces the use of explicit mappings that avoid this kind of situation.
+Fully automated mapping might seem useful, but it can become a problem when properties are changed or renamed and things stop working and the team doesn't immediately know why. Hypercubus.Mapping always enforces the use of explicit mappings that avoid this kind of situation.\
 &nbsp;
 
 #### Similar or even Faster than Traditional Handwritten Code
