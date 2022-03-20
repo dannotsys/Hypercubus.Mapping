@@ -135,7 +135,7 @@ Great performance and low memory footprint using lightweight c# features like de
 ###### * Test Configuration *
 
 AutoMapper 11.0.1\
-Hypercubus.Mapping 0.1.14\
+Hypercubus.Mapping 0.2.3\
 Mapster 7.2.0
 
 BenchmarkDotNet=v0.13.1, OS=Windows 10.0.19043.1466 (21H1/May2021Update)\
