@@ -104,11 +104,11 @@ Great performance and low memory footprint using lightweight c# features like de
 | 'AutoMapper InsideForEach' | 1,556.2 ms | 13.31 ms | 11.12 ms |  2.18 | 51000      | 18000      | 1000      |    314 MB |
 |     'AutoMapper MapToList' | 1,389.6 ms | 19.64 ms | 18.37 ms |  1.94 | 51000      | 18000      | 1000      |    314 MB |
 |    'AutoMapper MapToArray' | 1,416.1 ms | 10.72 ms |  8.95 ms |  1.98 | 51000      | 18000      | 1000      |    305 MB |
-|    'Mapster InsideForEach' |   684.7 ms |  8.40 ms |  7.01 ms |  0.96 | 37000      | 12000      |         - |    237 MB |
-|        'Mapster MapToList' |   594.2 ms |  5.69 ms |  5.05 ms |  0.83 | 37000      | 12000      |         - |    229 MB |
-|       'Mapster MapToArray' |   598.5 ms |  7.28 ms |  5.69 ms |  0.84 | 37000      | 12000      |         - |    229 MB |
+|   'Mapster* InsideForEach' |   684.7 ms |  8.40 ms |  7.01 ms |  0.96 | 37000      | 12000      |         - |    237 MB |
+|       'Mapster* MapToList' |   594.2 ms |  5.69 ms |  5.05 ms |  0.83 | 37000      | 12000      |         - |    229 MB |
+|      'Mapster* MapToArray' |   598.5 ms |  7.28 ms |  5.69 ms |  0.84 | 37000      | 12000      |         - |    229 MB |
 
-###### * : Mapster can be a bit faster if NO custom adapter configuration is used for a mapping and if there is no missing mapped properties. But if your Dtos classes are usually different from your business/entity classes then Hypercubus.Mapping would be the right choice for you.
+###### * : Mapster can be a bit faster if NO custom adapter configuration is used for a mapping and if there is no missing mapped properties. Hypercubus.Mapping keeps a more stable and predictable performance for any type of configuration.
 
 |                     Method |     Mean |   Error |   StdDev | Ratio |      Gen 0 |      Gen 1 |     Gen 2 | Allocated |
 |--------------------------- |---------:|--------:|---------:|------:|-----------:|-----------:|----------:|----------:|
