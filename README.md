@@ -108,7 +108,7 @@ Great performance and low memory footprint using lightweight c# features like de
 |       'Mapster* MapToList' |   594.2 ms |  5.69 ms |  5.05 ms |  0.83 | 37000      | 12000      |         - |    229 MB |
 |      'Mapster* MapToArray' |   598.5 ms |  7.28 ms |  5.69 ms |  0.84 | 37000      | 12000      |         - |    229 MB |
 
-###### * : Mapster can be a bit faster if NO custom adapter configuration is used for a mapping and if there is no missing mapped properties. Hypercubus.Mapping keeps a more stable and predictable performance for any type of configuration.
+###### * : Mapster can be a bit faster if NO custom adapter configuration is used for a mapping but Hypercubus.Mapping keeps a more stable and predictable performance for any type of configuration.
 
 |                     Method |     Mean |   Error |   StdDev | Ratio |      Gen 0 |      Gen 1 |     Gen 2 | Allocated |
 |--------------------------- |---------:|--------:|---------:|------:|-----------:|-----------:|----------:|----------:|
