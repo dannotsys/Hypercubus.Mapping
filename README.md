@@ -95,33 +95,33 @@ Great performance and low memory footprint using lightweight c# features like de
 
 #### 1,000,000 Person objects test with a array of Phones and User info properties:
 
-|                        Method |       Mean |    Error |   StdDev |     Median | Ratio |      Gen 0 |      Gen 1 |     Gen 2 | Allocated |
-|------------------------------ |-----------:|---------:|---------:|-----------:|------:|-----------:|-----------:|----------:|----------:|
-|          'Usual Hand Written' |   720.6 ms |  5.82 ms |  4.86 ms |   720.9 ms |  1.00 | 40000      | 13000      |         - |    244 MB |
-|    'Hypercubus InsideForEach' |   405.0 ms |  5.18 ms |  4.33 ms |   404.2 ms |  0.56 | 28000      |  9000      |         - |    184 MB |
-|        'Hypercubus MapToList' |   375.9 ms |  5.19 ms |  4.33 ms |   374.6 ms |  0.52 | 28000      |  9000      |         - |    175 MB |
-|       'Hypercubus MapToArray' |   368.3 ms |  4.90 ms |  4.09 ms |   366.6 ms |  0.51 | 28000      |  9000      |         - |    175 MB |
-| 'ExpressMapper InsideForEach' | 1,196.4 ms | 14.86 ms | 13.18 ms | 1,193.7 ms |  1.66 | 49000      | 17000      | 1000      |    306 MB |
-|     'ExpressMapper MapToList' |   799.2 ms | 12.25 ms | 10.23 ms |   800.5 ms |  1.11 | 43000      | 15000      | 1000      |    275 MB |
-|    'ExpressMapper MapToArray' |   809.1 ms | 16.05 ms | 29.75 ms |   794.8 ms |  1.14 | 43000      | 15000      | 1000      |    275 MB |
-|    'AutoMapper InsideForEach' | 1,532.7 ms |  8.35 ms |  6.97 ms | 1,533.0 ms |  2.13 | 51000      | 18000      | 1000      |    314 MB |
-|        'AutoMapper MapToList' | 1,411.0 ms | 13.88 ms | 11.59 ms | 1,409.7 ms |  1.96 | 51000      | 18000      | 1000      |    314 MB |
-|       'AutoMapper MapToArray' | 1,372.8 ms | 15.13 ms | 14.15 ms | 1,369.6 ms |  1.90 | 51000      | 18000      | 1000      |    305 MB |
-|       'Mapster InsideForEach' |   689.0 ms |  2.87 ms |  2.39 ms |   688.5 ms |  0.96 | 37000      | 12000      |         - |    237 MB |
-|           'Mapster MapToList' |   597.9 ms |  4.07 ms |  3.61 ms |   598.4 ms |  0.83 | 37000      | 12000      |         - |    229 MB |
-|          'Mapster MapToArray' |   594.5 ms |  2.49 ms |  1.94 ms |   594.4 ms |  0.82 | 37000      | 12000      |         - |    229 MB |
+|                        Method |       Mean |    Error |   StdDev | Ratio | RatioSD |      Gen 0 |      Gen 1 |     Gen 2 | Allocated |
+|------------------------------ |-----------:|---------:|---------:|------:|--------:|-----------:|-----------:|----------:|----------:|
+|          'Usual Hand Written' |   656.1 ms |  1.78 ms |  1.49 ms |  1.00 |    0.00 | 39000      | 13000      |         - |    244 MB |
+|    'Hypercubus InsideForEach' |   373.0 ms |  7.41 ms | 12.58 ms |  0.58 |    0.02 | 28000      |  9000      |         - |    184 MB |
+|        'Hypercubus MapToList' |   346.9 ms |  6.05 ms |  5.05 ms |  0.53 |    0.01 | 28000      |  9000      |         - |    175 MB |
+|       'Hypercubus MapToArray' |   343.0 ms |  6.64 ms | 10.54 ms |  0.52 |    0.02 | 28000      |  9000      |         - |    175 MB |
+| 'ExpressMapper InsideForEach' | 1,115.4 ms | 12.26 ms | 11.47 ms |  1.70 |    0.02 | 49000      | 17000      | 1000      |    306 MB |
+|     'ExpressMapper MapToList' |   730.7 ms | 14.32 ms | 18.11 ms |  1.11 |    0.03 | 43000      | 15000      | 1000      |    275 MB |
+|    'ExpressMapper MapToArray' |   722.9 ms | 14.35 ms | 20.11 ms |  1.11 |    0.03 | 43000      | 15000      | 1000      |    275 MB |
+|    'AutoMapper InsideForEach' | 1,760.6 ms | 13.74 ms | 11.47 ms |  2.68 |    0.02 | 57000      | 20000      | 1000      |    352 MB |
+|        'AutoMapper MapToList' | 1,619.8 ms | 12.26 ms | 10.87 ms |  2.47 |    0.01 | 57000      | 20000      | 1000      |    352 MB |
+|       'AutoMapper MapToArray' | 1,608.5 ms | 17.69 ms | 16.55 ms |  2.45 |    0.03 | 57000      | 20000      | 1000      |    343 MB |
+|       'Mapster InsideForEach' |   734.4 ms |  6.02 ms |  5.03 ms |  1.12 |    0.01 | 37000      | 12000      |         - |    237 MB |
+|           'Mapster MapToList' |   569.7 ms |  4.79 ms |  4.00 ms |  0.87 |    0.00 | 37000      | 12000      |         - |    229 MB |
+|          'Mapster MapToArray' |   570.9 ms |  2.27 ms |  2.01 ms |  0.87 |    0.00 | 37000      | 12000      |         - |    229 MB |
 
 ###### * : Mapster can be a bit faster if NO custom adapter configuration is used for a mapping but Hypercubus.Mapping keeps a more stable and predictable performance for any type of configuration.
 
-|                     Method |     Mean |   Error |   StdDev | Ratio |      Gen 0 |      Gen 1 |     Gen 2 | Allocated |
-|--------------------------- |---------:|--------:|---------:|------:|-----------:|-----------:|----------:|----------:|
-|       'Usual Hand Written' | 716.2 ms | 7.60 ms |  6.74 ms |  1.00 | 40000      | 13000      |         - |    244 MB |
-| 'Hypercubus InsideForEach' | 445.8 ms | 4.36 ms |  3.64 ms |  0.62 | 28000      |  9000      |         - |    184 MB |
-|     'Hypercubus MapToList' | 389.4 ms | 7.27 ms |  6.80 ms |  0.54 | 28000      |  9000      |         - |    175 MB |
-|    'Hypercubus MapToArray' | 365.2 ms | 4.82 ms |  3.76 ms |  0.51 | 28000      |  9000      |         - |    175 MB |
-|    'Mapster InsideForEach' | 416.1 ms | 7.73 ms |  7.59 ms |  0.58 | 30000      | 10000      | 1000      |    191 MB |
-|        'Mapster MapToList' | 326.8 ms | 4.39 ms |  9.07 ms |  0.45 | 29000      | 10000      |         - |    183 MB |
-|       'Mapster MapToArray' | 320.0 ms | 6.32 ms | 14.91 ms |  0.42 | 29000      | 10000      |         - |    183 MB |
+|                     Method |     Mean |    Error |   StdDev |   Median | Ratio |      Gen 0 |      Gen 1 | Allocated |
+|--------------------------- |---------:|---------:|---------:|---------:|------:|-----------:|-----------:|----------:|
+|       'Usual Hand Written' | 699.3 ms | 13.96 ms | 24.81 ms | 688.4 ms |  1.00 | 40000      | 13000      |    244 MB |
+| 'Hypercubus InsideForEach' | 370.6 ms |  4.74 ms |  4.87 ms | 370.7 ms |  0.52 | 28000      |  9000      |    184 MB |
+|     'Hypercubus MapToList' | 353.5 ms |  2.92 ms |  2.44 ms | 354.6 ms |  0.50 | 28000      |  9000      |    175 MB |
+|    'Hypercubus MapToArray' | 346.9 ms |  4.16 ms |  3.25 ms | 347.7 ms |  0.49 | 28000      |  9000      |    175 MB |
+|    'Mapster InsideForEach' | 402.7 ms |  7.13 ms |  9.02 ms | 400.1 ms |  0.57 | 29000      | 10000      |    191 MB |
+|        'Mapster MapToList' | 297.7 ms |  5.93 ms |  6.09 ms | 297.4 ms |  0.42 | 29000      | 10000      |    183 MB |
+|       'Mapster MapToArray' | 324.5 ms |  6.39 ms | 10.50 ms | 325.2 ms |  0.46 | 29000      | 10000      |    183 MB |
 
 ###### * Legends *
  Mean      : Arithmetic mean of all measurements\
@@ -138,7 +138,7 @@ Great performance and low memory footprint using lightweight c# features like de
 ###### * Test Configuration *
 
 AutoMapper 11.0.1\
-Hypercubus.Mapping 0.2.5\
+Hypercubus.Mapping 0.2.7\
 Mapster 7.2.0
 
 BenchmarkDotNet=v0.13.1, OS=Windows 10.0.19043.1466 (21H1/May2021Update)\
