@@ -11,6 +11,7 @@ Add the library to your project using Nuget Package Manager or with the command 
 ```bash
 dotnet add package Hypercubus.Mapping
 ```
+&nbsp;
 
 ### Usage
 
