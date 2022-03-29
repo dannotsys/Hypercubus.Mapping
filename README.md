@@ -4,6 +4,14 @@
 A fast and minimalist object to object mapper for .Net.\
 &nbsp;
 
+### How to start
+
+Add the library to your project using Nuget Package Manager or with the command below:
+
+```bash
+dotnet add package Hypercubus.Mapping
+```
+
 ### Usage
 
 All the configured mapping is managed by the `Hypercubus.Mapping.Mapper` class. You can use it with your favorite dependency injection framework to inject the mapper instance in your Asp.Net controller classes.\
