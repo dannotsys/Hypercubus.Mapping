@@ -1,5 +1,4 @@
 ﻿using BenchmarkDotNet.Attributes;
-using Hypercubus.Mapping.Extensions;
 using Hypercubus.Mapping.PerformanceTests.Dto;
 using Hypercubus.Mapping.PerformanceTests.Entity;
 using Mapster;
@@ -183,7 +182,7 @@ namespace Hypercubus.Mapping.PerformanceTests
 
             personsDto = null;
         }
-          */
+         */
 
         [Benchmark(Description = "ExpressMapper InsideForEach")]
         public void ExpressMapperMapper()
@@ -238,7 +237,7 @@ namespace Hypercubus.Mapping.PerformanceTests
         {
             PersonDto[] personsDto = _autoMapperMapper.Map<IEnumerable<Person>, PersonDto[]>(persons);
         }
-         
+          
 
         [Benchmark(Description = "Mapster InsideForEach")]
         public void MapsterMapper()
