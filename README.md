@@ -58,7 +58,7 @@ After injecting it in your controllers just make a simple call like this:
 ```csharp
 List<PersonDto> personsDto = mapper.Map(persons).To<List<PersonDto>>();
 ```
-If you use a single set of mapping rules, i.e. a single Mapper class, you can use a shorter and easier to write mapping extension method:
+If you use a single set of mapping rules, i.e. a single Mapper class object, you can use a shorter and easier to write mapping extension method:
 
 ```csharp
 List<PersonDto> personsDto = persons.Map().To<List<PersonDto>>();
